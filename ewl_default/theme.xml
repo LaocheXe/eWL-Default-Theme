@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Theme name="eWL Default" version="1.5" date="2020-4-27" compatibility="2.0" livedemo="http://tocome.comTODO">
+	<author name="LaocheXe" email="forbiddenchaos@gmail.com" url="https://github.com/LaocheXe" />
+	<summary lan="">Main eWL Theme from 2012</summary>
+	<description lan="">Main Theme from eWarrior Leagues, (Old Style) that was used back in 2012</description>
+	<category>gaming</category>
+	<plugins>
+		<plugin name='featurebox' url='core' />
+		<plugin name='banner' url='core' />
+		<plugin name='pm' url='core' />
+		<plugin name='poll' url='core' />
+		<plugin name='download' url='core' />
+		<plugin name='forum' url='core' />
+		<plugin name='tinymce4' url='core' />
+		<plugin name='gallery' url='core' />
+		<plugin name='social' url='core' />
+		<plugin name='rss_menu' url='core' />
+	</plugins>
+	<keywords>
+		<word>ewl</word>
+		<word>wide</word>
+		<word>bootstrap</word>
+		<word>grey</word>
+		<word>orange</word>
+		<word>clan</word>
+		<word>classic</word>
+	</keywords>
+	<copyright>GNU GPLv3</copyright>
+	<screenshots>
+		<image>preview_frontend.png</image>
+	</screenshots>
+	<stylesheets>
+		<css file="style.css" name="Default" />
+		<css file="css/animate.min.css" name="animate.min" scope='admin' description="not admin" thumbnail='' url='' />
+		<css file="css/bootstrap.css" name="bootstrap" scope='admin' description="not admin" thumbnail='' url='' />
+		<css file="css/bootstrap.min.css" name="bootstrap.min" scope='admin' description="not admin" thumbnail='' url='' />
+		<css file="*" name="*"  />
+	</stylesheets>
+	<layouts>
+		<layout name='classic_four_wide' title='Default' default='true' >
+			<custompages>FRONTPAGE</custompages>
+			<menuPresets>
+				<area id='1'>
+					<menu name='online' />
+				</area>
+				<area id='2'>
+					<menu name='featurebox' />
+				</area>
+				<area id='3'>
+					<menu name='banner' />
+				</area>
+				<area id='4'>
+					<menu name='login' />
+				</area>
+				<area id='5'>
+					<menu name='poll' />
+				</area>
+				<area id='6'>
+					<menu name='clock' />
+					<menu name='counter' />
+				</area>
+			</menuPresets>
+		</layout>
+		<layout name='classic_wide' title='No Top Menu' default='false' >
+			<custompages>user download news error gallery</custompages>
+			<menuPresets>
+				<area id='1'>
+					<menu name='online' />
+				</area>
+				<area id='3'>
+					<menu name='banner' />
+				</area>
+				<area id='4'>
+					<menu name='login' />
+				</area>
+				<area id='5'>
+					<menu name='poll' />
+				</area>
+				<area id='6'>
+					<menu name='clock' />
+					<menu name='counter' />
+				</area>
+			</menuPresets>
+		</layout>
+		<layout name='classic_lefty_wide' title='Left Menu Only' default='false' >
+			<custompages>forum</custompages>
+			<menuPresets>
+				<area id='1'>
+					<menu name='online' />
+				</area>
+				<area id='3'>
+					<menu name='banner' />
+				</area>
+				<area id='5'>
+					<menu name='poll' />
+				</area>
+				<area id='6'>
+					<menu name='clock' />
+					<menu name='counter' />
+				</area>
+			</menuPresets>
+		</layout>
+		<layout name='classic_righty_wide' title='Right Menu Only' default='false' >
+			<custompages></custompages>
+			<menuPresets>
+				<area id='3'>
+					<menu name='banner' />
+				</area>
+				<area id='4'>
+					<menu name='login' />
+				</area>
+				<area id='5'>
+					<menu name='poll' />
+				</area>
+				<area id='6'>
+					<menu name='clock' />
+					<menu name='counter' />
+				</area>
+			</menuPresets>
+		</layout>
+	</layouts>
+</e107Theme>
