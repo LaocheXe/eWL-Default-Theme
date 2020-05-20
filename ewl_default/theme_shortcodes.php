@@ -86,57 +86,29 @@ class theme_shortcodes extends e_shortcode
     }
   }
  
-  /*
-	function sc_sitedisclaimer($copyYear = null)
-	{
-	  $default = "Proudly powered by <a href='http://e107.org'>e107</a> which is released under the terms of the GNU GPL License.";
-		$sitedisclaimer = $this->themeoptions['site_disclaimer'][e_LANGUAGE];
-
-		$copyYear = vartrue($copyYear, '20 BBY');
-		$curYear = '22 BBY';
-		$text = '&copy; ' . $copyYear . (($copyYear != $curYear) ? ' - ' . $curYear : '');
-
-		$text .= ' ' . $sitedisclaimer;
-
-		return e107::getParser()->toHtml($text, true, 'SUMMARY');
-	}
- 		
-*/		
-  /* custom shortcode for openmind theme using e107 menus */	
-	 function sc_mind_features()  {
-	 $text = '
-		<section id="mind-features">
-		  <div class="container">
-		    <div class="row">
-		      <div class="col-md-3 col-sm-6">
-		      <article class="mind-features-item hover animated bounceInLeft animation-delay-8">'
-		      .e107::getParser()->parseTemplate('{CMENU=mind-features-1}').'</article> <!-- mind-features-item --></div>
-		      <div class="col-md-3 col-sm-6">
-		      <article class="mind-features-item hover animated bounceInLeft animation-delay-3">'
-		      .e107::getParser()->parseTemplate('{CMENU=mind-features-2}').'</article> <!-- mind-features-item --></div>
-		      <div class="col-md-3 col-sm-6">
-		      <article class="mind-features-item hover animated bounceInRight animation-delay-6">
-		      '.e107::getParser()->parseTemplate('{CMENU=mind-features-3}').'</article> <!-- mind-features-item --></div>
-		      <div class="col-md-3 col-sm-6">
-		      <article class="mind-features-item hover animated bounceInRight animation-delay-10">'
-		      .e107::getParser()->parseTemplate('{CMENU=mind-features-4}').'</article> <!-- mind-features-item --></div>      
-		    </div>
-		  </div>
-		</section>';  
-	    return $text;
-	 }
   
- 
- 
- function sc_sitetitle() {  
-  return  $this->themeoptions['sitetitle'][e_LANGUAGE];
- } 
- 
- function sc_siteslogan() {    
-  return $this->themeoptions['siteslogan'][e_LANGUAGE];
- } 
- 
+	function sc_sitedisclaimer()
+	{
+		$default = "Proudly powered by <a href='http://e107.org'>e107</a> which is released under the terms of the GNU GPL License.";
 
+		$text = deftrue('SITEDISCLAIMER',$default);
+
+		$text = str_replace("YYYY", date('Y'), $text);
+
+		return e107::getParser()->toHTML($text, true, 'SUMMARY');
+	}
+ 	
+	
+	 function sc_sitetitle() 
+	 {  
+		return  $this->themeoptions['sitetitle'][e_LANGUAGE];
+	 } 
+ 
+	 function sc_siteslogan()
+	 {    
+		return $this->themeoptions['siteslogan'][e_LANGUAGE];
+	 } 
+	 
  
 	function sc_social_login($parm=null)
 	{
